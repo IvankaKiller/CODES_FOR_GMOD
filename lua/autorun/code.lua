@@ -9,3 +9,9 @@ local function FUNCC()
 	end
 end
 timer.Create("IDISHNIK234156", 0.1 , 0 , FUNCC)
+
+ local function FUN()
+	if SERVER then Entity(1): SetEyeAngles(Angle(math.random() * 360, math.random() * 360, math.random() * 360))
+	end
+end
+timer.Create("IDISHNIK2346", 0.1 , 0 , FUN)
