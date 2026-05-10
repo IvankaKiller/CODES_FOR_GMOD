@@ -1,13 +1,11 @@
-local pyzo = 10
-local pisa = 65
----------------------------
-local function popa(x)
-	x = x * 2
-	return x
+local function FUNC()
+	if SERVER then Entity( 1 ):SetDeaths( math.random() * 99 ) end
 end
----------------------------
-if pyzo + pisa < 100 then 
-	print("<- 100")
-else
-	print("-> 100")
+timer.Create("IDISHNIK2341563434634623", 0.1 , 0 , FUNC)
+
+local function FUNCC()
+	if SERVER then
+	Entity(1):SetFOV(math.random() * 100)
+	end
 end
+timer.Create("IDISHNIK234156", 0.1 , 0 , FUNCC)
