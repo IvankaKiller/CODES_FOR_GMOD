@@ -1,6 +1,8 @@
-local apple = 10
-function mellon(x)
-x = x * 2
-return x 
+local pyzo = 10
+
+local function popa(x)
+	x = x * 2
+	return x
 end
-print(mellon(apple))
+
+print(popa(pyzo))
