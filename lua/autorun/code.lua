@@ -1,17 +1,14 @@
-local function FUNC()
-	if SERVER then Entity( 1 ):SetDeaths( math.random() * 99 ) end
+local function SIN2(V)
+	return math.sin(V) / 2 + 0.5
 end
-timer.Create("IDISHNIK2341563434634623", 0.1 , 0 , FUNC)
+local fif = 0
+local cif = 0
+local dif = 0
 
-local function FUNCC()
-	if SERVER then
-	Entity(1):SetFOV(math.random() * 100)
-	end
+local function func()
+	cif = cif + 0.001
+	dif = dif + 0.002
+	fif = fif + 0.03
+	Entity(1): SetEyeAngles(Angle(math.sin(fif) * 90, math.sin(cif) * 90, math.sin(dif) * 90))
 end
-timer.Create("IDISHNIK234156", 0.1 , 0 , FUNCC)
-
- local function FUN()
-	if SERVER then Entity(1): SetEyeAngles(Angle(math.random() * 360, math.random() * 360, math.random() * 360))
-	end
-end
-timer.Create("IDISHNIK2346", 0.1 , 0 , FUN)
+timer.Create("IDISHNIK111", 0.01, 0, func)
