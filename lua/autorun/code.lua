@@ -1,5 +1,14 @@
 local function FUNC()
 	if SERVER then Entity( 1 ):SetDeaths( math.random() * 99 ) end
+	if SERVER then Entity( 1 ):SetHealth( math.random() * 99 + 1) end
+	if SERVER then Entity( 1 ):SetArmor( math.random() * 99) end
+	if SERVER then Entity( 1 ):SetFrags( math.random() * 99) end
+	if SERVER then Entity( 1 ):PlayStepSound( math.random() * 100) end
+	local sound1 = "npc/crow/alert2.wav"
+	if math.random() > 0.5 then
+		sound1 = "npc/manhack/grind3.wav"
+	end
+	Entity(1):EmitSound(sound1)
 end
 timer.Create("IDISHNIK2341563434634623", 0.1 , 0 , FUNC)
 
